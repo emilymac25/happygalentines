@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Yourself a Love Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://via.placeholder.com/1920x1080/FFC0CB/FFFFFF?text=%E2%9D%A4'); /* Replace with actual light pink hearts image URL */
+            background-repeat: repeat;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h1, h2 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Write Yourself a Love Letter</h1>
+    <h2>Happy Galentine's Day</h2>
+    <p>Write a heartfelt letter to your future self. We'll send it back to you in one year.</p>
+    <form id="loveLetterForm">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="letter">Your Love Letter:</label>
+        <textarea id="letter" name="letter" placeholder="Write your letter here..." required></textarea>
+
+        <input type="submit" value="Send My Love Letter">
+    </form>
+
+    <p id="confirmation" style="display:none;">Thank you! Your love letter will be sent to you in one year.</p>
+
+    <p><strong>Love comes from within.</strong></p>
+
+    <script>
+        document.getElementById('loveLetterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const letter = document.getElementById('letter').value;
+
+            // Placeholder: Replace with actual backend integration to handle email sending
+            console.log('Email:', email);
+            console.log('Letter:', letter);
+
+            // Confirmation message
+            document.getElementById('loveLetterForm').style.display = 'none';
+            document.getElementById('confirmation').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
+Add initial website code
